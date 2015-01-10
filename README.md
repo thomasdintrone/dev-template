@@ -49,6 +49,7 @@ and the js files in the footer.
 
 4. PHP Code
 -- Mobile Device detector (for detecting if a user is using mobile phone and/or tablet)
+-- Contact Form file
 
 5. Other
 -- HTML5 Shiv for IE8 compatibility
