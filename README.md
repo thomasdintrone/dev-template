@@ -57,5 +57,6 @@ and the js files in the footer.
 -- Meta viewport
 -- Favicon Urls ready in the <head>
 -- Nav Constant variables to add "current-menu-item" classes to a main nav <a> tag
+-- Export file functionality that zips and flattens the site into straight html in a separate folder (sequentially - export1, export2, export3) for cross server functionality
 
 More Instructions & Information in future versions...
