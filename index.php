@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Curran &amp; Connors TEMPLATE</title>
+<title>WEB TEMPLATE</title>
 <meta name="description" content="">
 <meta name="robots" content="noindex,nofollow">
 
@@ -57,7 +57,7 @@
 <body class="home <?php echo $body_class; ?>">
 
 <div class="content template group">
-    <h1><a href="index.php">C & C Web Development Template</a></h1>
+    <h1><a href="index.php">Web Development Template</a></h1>
     
     <br><br>
     
