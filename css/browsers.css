@@ -1,0 +1,82 @@
+/* 	
+	VICTORY IS MINE!
+	Use this for specific browser detection, but ONLY IF YOU NEED TO. You shouldn't have to use these but it's nice to know they're there if you're in a bind :)
+	
+	Got these from http://browserhacks.com/ 
+*/
+
+/************************************
+Chrome 22-28
+************************************/
+@media \\0 screen {
+ 	/* PUT CODE HERE */
+}
+
+/************************************
+Chrome 29+
+************************************/
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+ 	/* PUT CODE HERE */
+}
+
+/************************************
+Firefox 3- (DOES NOT SUPPORT CSS3)
+************************************/
+@media \0 all {
+	/* PUT CODE HERE */
+}
+
+/************************************
+Firefox 3.6+
+************************************/
+@media screen and (-moz-images-in-menus:0) {
+	/* PUT CODE HERE */
+}
+
+/************************************
+Firefox 4+
+************************************/
+@media screen and (min--moz-device-pixel-ratio:0) {
+	/* PUT CODE HERE */
+}
+
+/************************************
+Firefox 8+
+************************************/
+@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+	/* PUT CODE HERE */
+}
+
+@media all and (-moz-images-in-menus:0) and (min-resolution: .001dpcm) {
+	/* PUT CODE HERE */
+}
+
+/************************************
+Firefox 11+ (DOES NOT SUPPORT CSS3)
+************************************/
+@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) {
+
+} }
+
+@media all and (-moz-images-in-menus:0) { @media (min-width: 0px) {
+
+} }
+
+/************************************
+Safari
+************************************/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* PUT CODE HERE */
+}
+
+/************************************
+Everything BUT Safari* & IE*
+************************************/
+@media screen { @media (min-width: 0px) {
+	/* PUT CODE HERE */
+} }
+	
+/************************************
+IE 10
+************************************/
+html[data-useragent*='MSIE 10.0'] SELECTOR {  }
