@@ -1,5 +1,10 @@
 <?php 
 /*************************************************************************
+DEBUGGING - Uncomment if needed
+*************************************************************************/
+//ini_set('display_errors', 1);
+
+/*************************************************************************
 REQUIREMENTS
 *************************************************************************/
 require_once('core_paths.php');
@@ -30,15 +35,17 @@ $body_class = set_body_class($base);
 if($body_class == '' || $body_class == 'index') { $body_class = 'homepage'; }
 
 // Select Plugins to include
-$the_plugins = array(
-						//'pretty_photo',
-						//'scroll_to_fixed',
-						//'financial_tables',
-						//'slider',
-						//'lightbox',
-						//'scrollbar',
-						'bootstrap',
-				);
+$the_plugins = 
+	array(
+		'bootstrap',
+		//'non-responsive',
+		//'pretty_photo',
+		//'scroll_to_fixed',
+		//'financial_tables',
+		//'slider',
+		//'lightbox',
+		//'scrollbar',
+	);
 
 $plugins->add_plugin($the_plugins);
 ?>

@@ -11,6 +11,8 @@ NOTES
  
 For PIE: behavior: url(css/pie/PIE.htc);
 
+Clearfix: <div class="clearfix visible-xs-block"></div>
+
 **********************************************/
 
 
@@ -25,7 +27,7 @@ FONTS
 body { font-family:Helvetica, arial, sans-serif; }
 
 /*********************************************
-HTML 5 
+HTML5 
 **********************************************/
 article, aside, figure, footer, header, nav, section {display: block;}
 
@@ -34,8 +36,6 @@ GENERAL
 **********************************************/
 html, body { height:100%; margin:0; padding:0; }
 body {  }
-
-.small { font-size:.75em; }
 
 a {  }
 a:hover { text-decoration:underline; }
@@ -62,17 +62,7 @@ NAVIGATION
 /*********************************************
 PAGE STRUCTURE
 **********************************************/
-#wrapper { width:960px; margin:0 auto; position:relative;}
-
-.one-third { width:258px; padding-left:10px; float:left; margin-right:30px; padding-right:30px;}
-.one-third.last { margin-right:0; }
-
-.two-thirds { float:left; width:540px; }
-.left { float:left; }
-aside.sidebar { float:right; border-left:1px solid #eee; padding-left:30px; }
-
 /* HEADER */
-
 
 
 /* SLIDER */
@@ -81,12 +71,32 @@ aside.sidebar { float:right; border-left:1px solid #eee; padding-left:30px; }
 /* MAIN CONTENT SECTIONS */
 
 
-
 /* FOOTER */
+
+
+/*********************************************
+PAGE SPECIFIC
+**********************************************/
+
 
 /*********************************************
 BLOCKS
 **********************************************/
+/* Contact Form */
+.contactFormWrap { position:relative; z-index:999;}
+.form { /*float:right;*/ width:100%; background:#191919; margin-bottom: 5px;}
+.form form { padding:0px 15px 20px; }
+.contactFormWrap h3 { margin:0; color:#C67914; padding:10px 15px 20px; font-size:19.06px; }
+.form textarea, .form label.full { display:block; width:100%; float:none;}
+.form label, .form input { display:inline-block; } 
+.form label { font-size:14px; color:#fff; width:80px; float:left;}
+.form input { background:#fff; margin-bottom:1em; border:0; padding:1px 0 2px; height:20px; width:65.7%; }
+input.submitButton { text-transform:uppercase;margin-left:0;display:block; margin-bottom:0; font-size:15px; height:auto;width:auto; background:#ccc; color:#fff; padding:5px 8px; }
+input.submitButton:hover { cursor:pointer; }
+.form textarea { background:#fff;border:0; height:60px;  width:98.5%;  margin-bottom:1em;}
+span.errorMessage, span.successMessage { font-size:12px; font-weight:bold; position:absolute; bottom:15px; right:15px; }  
+span.errorMessage { color:red; }
+span.successMessage { color:green; }
 
 /*********************************************
 SPECIALTY
@@ -97,16 +107,8 @@ span.sharethis { background:none !important;}
 .st_facebook, .st_twitter, .st_linkedin, .st_pinterest, .st_email { display:none; }
 
 /* Just meant for Template design purposes... Just delete these */
-.template { width:960px; margin:0 auto; border:3px solid #AAA39C;padding:20px; margin-top:10px; }
+.container .col-sm-12 { border:3px solid #AAA39C; margin-top:10px; }
 .template h1, .template h2, .template h3, .template h4 { font-weight:bold; margin-bottom:5px; color:#FF600F;}
 .template h1 a { color:#FF600F; }
 .template p { font-size:12px; color:#666;}
 .template a { color:#003466; }
-.template .plugin { float:left; width:25%; margin-bottom:30px; }
-
-/*********************************************
-SET UP DIV SIZE
-**********************************************/
-.container { width:936px !important; }
-.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 { float:left; }
-.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}

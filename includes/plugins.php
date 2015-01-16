@@ -55,12 +55,17 @@ class Plugin {
 			if($plugin == 'bootstrap') {
 				$dir = 'bootstrap'; // This is the name of the specific plugin directory
 				$this->plugins_css[] 	= self::css_ext(SITE_ROOT.$dir.'/css/bootstrap.min.css'); // The path to the CSS file
-				//$this->plugins_css[] 	= self::css_ext(SITE_ROOT.$dir.'/bootstrap-lightbox/bootstrap-lightbox.min.css'); // The path to the CSS file
-				//$this->plugins_js[]		= self::js_ext(SITE_ROOT.$dir.'/js/bootstrap.min.js'); // The path to the JS file
-				$this->plugins_js[]		= self::js_ext(SITE_ROOT.$dir.'/bootstrap-lightbox/bootstrap-lightbox.min.js'); // The path to the JS file
+				$this->plugins_js[]		= self::js_ext(SITE_ROOT.$dir.'/js/bootstrap.min.js'); // The path to the JS file
 				
 				// REFERENCE: 	http://getbootstrap.com/javascript/
-				// LIGHTBOX REFERENCE: 	http://www.jasonbutz.info/bootstrap-lightbox/
+			}
+			
+			// FORCE NON-RESPONSIVE
+			if($plugin == 'non-responsive') {
+				$this->plugins_css[] 	= self::css_ext(SITE_ROOT.'/css/force-non-responsive.css'); // The path to the CSS file				
+				
+				// REFERENCE: 	This will add the stylesheet above that will allow the use of bootstrap framework while not
+				// 				actually being responsive
 			}
 			
 			// PRETTY PHOTO
@@ -97,7 +102,7 @@ class Plugin {
 				$this->plugins_js[]		= self::js($dir.'/Chart.min.js'); // The path to the JS file
 				
 				// REFERENCE: 	http://chartjs.org/
-				// HELPERS: 	$('#tableone').tableHover();
+				// HELPERS: 	
 			}
 			
 			// FLOWPLAYER
@@ -140,7 +145,7 @@ class Plugin {
 				$dir = 'touchswipe'; // This is the name of the specific plugin directory
 				$this->plugins_js[]		= self::js($dir.'/jquery.touchSwipe.min.js'); // The path to the JS file
 				
-				// REFERENCE: 	http://labs.rampinteractive.co.uk/touchSwipehttp://labs.rampinteractive.co.uk/touchSwipe
+				// REFERENCE: 	http://labs.rampinteractive.co.uk/touchSwipe
 				
 				/* HELPERS: 	$(function() {      
 								  //Enable swiping...
@@ -175,17 +180,8 @@ class Plugin {
 				//$this->plugins_css[] 	= self::css($dir.'/lightbox.css'); // The path to the CSS file
 				$this->plugins_js[]		= self::js($dir.'/lightbox.js'); // The path to the JS file
 				
-				// REFERENCE: 	Made by yours truly to streamline creating the tables to business standards
-				/* HELPERS: 	Simply add this function: setTable('#exampleTableID', [2, 1, 2, 1, 0]);
-								
-								First Value: Table ID
-								Second Value: Array for dollar sign position based o nthe number of columns i nthe table
-								
-								The array sets the left position in px of the "$" for each column. I have 5 columns in there right now 
-								but simply add more to the array as needed. 
-								** The function automatically ignores the VERY FIRST column of the table because the first column is for the text. 
-								(I.E. The above array with 5 values is for a table with 6 TOTAL COLUMNS)
-								Don't get it? Shame on you! http://bit.ly/Rrnm17
+				// REFERENCE: 	Made by yours truly. Cray Cray
+				/* HELPERS: 	
 				*/			   	
 			}
 			
@@ -198,17 +194,8 @@ class Plugin {
 				$this->plugins_js[]		= self::js($dir.'/share.js'); // The path to the JS file
 				$this->plugins_js[]		= self::js($dir.'/storybox.js'); // The path to the JS file
 				
-				// REFERENCE: 	Made by yours truly to streamline creating the tables to business standards
-				/* HELPERS: 	Simply add this function: setTable('#exampleTableID', [2, 1, 2, 1, 0]);
-								
-								First Value: Table ID
-								Second Value: Array for dollar sign position based o nthe number of columns i nthe table
-								
-								The array sets the left position in px of the "$" for each column. I have 5 columns in there right now 
-								but simply add more to the array as needed. 
-								** The function automatically ignores the VERY FIRST column of the table because the first column is for the text. 
-								(I.E. The above array with 5 values is for a table with 6 TOTAL COLUMNS)
-								Don't get it? Shame on you! http://bit.ly/Rrnm17
+				// REFERENCE: 	Made by yours truly. Directions to come.
+				/* HELPERS: 	
 				*/			   	
 			}
 			

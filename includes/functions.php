@@ -44,5 +44,4 @@ function preload($array) {
 		echo '<a class="preload" style="background-image:url('.$img_path.')"></a>';
 	}
 }
-
 ?>

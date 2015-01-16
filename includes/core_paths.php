@@ -10,16 +10,16 @@ Define them as absolute paths to make sure that require_once works as expected
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
 // LOCAL SITE ROOT PATH
-defined('SITE_ROOT') ? null : define('SITE_ROOT', 'http://localhost:8888/github/dev-template/');
+defined('SITE_ROOT') ? null : define('SITE_ROOT', 'http://localhost/ready-template/html/');
 
 // REMOTE SITE ROOT PATH
-//defined('SITE_ROOT') ? null : define('SITE_ROOT', 'http://stage2.curran-connors.com/template/');
+//defined('SITE_ROOT') ? null : define('SITE_ROOT', 'http://dev.curran-connors.com/{REMOTE-PATH-GOES-HERE}/');
 
 // LIBRARY PATH
 defined('LIB_PATH') ? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
 
 // BASE PATH
-defined('MAIN_BODY_CLASS') ? null : define('MAIN_BODY_CLASS', 'template'); // this is the name of the folder
+defined('MAIN_BODY_CLASS') ? null : define('MAIN_BODY_CLASS', 'ready-template/html'); // this is the name of the folder
 
 /*******************************
 HTML SPECIFIC PATHS

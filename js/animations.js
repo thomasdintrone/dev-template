@@ -1,3 +1,4 @@
+// DOCUMENT READY
 $(function(){
 	/************************************************************
 	SET UP THE BASICS:
@@ -10,10 +11,54 @@ $(function(){
 	b.setAttribute('data-useragent',  navigator.userAgent);
 	b.setAttribute('data-platform', navigator.platform );
 	
+	// IE8 Bug Fix for fontawesome menu icon
+	if($('html').hasClass('lt-ie9')) {
+			var head = document.getElementsByTagName('head')[0],
+			style = document.createElement('style');
+		style.type = 'text/css';
+		style.styleSheet.cssText = ':before,:after{content:none !important';
+		head.appendChild(style);
+		setTimeout(function(){
+			head.removeChild(style);
+		}, 0);
+	}
+	
+	// Initiaite Browser Detect from functions.js:
+	BrowserDetect.init();
+    // document.write("You are using <b>" + BrowserDetect.browser + "</b> with version <b>" + BrowserDetect.version + "</b>");
+	// identity: "Chrome", "Explorer", "Firefox", "Safari", "Opera" 
+	// ex: if(BrowserDetect.browser == 'Firefox') { //do something... }
+	
 	/************************************************************
 	CUSTOM CODING:
 	************************************************************/
 	
+	
+	
+	/************************************************************
+	WINDOW RESIZE (if needed)
+	************************************************************/
+	$(window).resize(function(){
+	
+		if($(window).width() >= '768') { // ipad
+			
+		} else {
+			
+		}
+		
+		// IE8 Bug Fix for fontawesome menu icon
+		if($('html').hasClass('lt-ie9')) {
+				var head = document.getElementsByTagName('head')[0],
+				style = document.createElement('style');
+			style.type = 'text/css';
+			style.styleSheet.cssText = ':before,:after{content:none !important';
+			head.appendChild(style);
+			setTimeout(function(){
+				head.removeChild(style);
+			}, 0);
+		}
+	
+	});
 	
 	/************************************************************
 	REPSONSIVE (if needed)
@@ -34,4 +79,9 @@ $(function(){
 			(navigator.platform.indexOf("iPod") != -1)
 		);
 	}
+});
+
+// ON LOAD
+$(window).load(function(){
+	
 });

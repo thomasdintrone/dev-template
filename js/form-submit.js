@@ -1,4 +1,3 @@
-// JavaScript Document
 $(function(){
 	// Variables for Request an Estimate form:
 	var form				=	$("#checkForm");

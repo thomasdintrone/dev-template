@@ -16,6 +16,7 @@ function setTable(table, settings){
     if ( settings ){$.extend(config, settings);}
 	
 	// SET THE TABLE:	
+	$(table).addClass('selectedTable');
 	$(table).find('th:first').addClass('firstCol');
 	
 	$(table + ' td').css({ color:config.textColor })
@@ -57,7 +58,9 @@ function setTable(table, settings){
 					return old
 							.replace('$', '<span class="dollar" style="left:'+pos+'px">$</span>')
 							.replace('(', '<span class="paren">(')
-							.replace(')', ')</span>');
+							.replace(')', ')</span>')
+							.replace('%)', '%)</span>')
+							.replace('%', '<span class="percent">%</span>');
 				});
 			}
         	c++;
@@ -67,4 +70,5 @@ function setTable(table, settings){
 		b++;
      });
 
+	$(table).css({ opacity:0, 'visibility':'visible' }).animate({ opacity:1 });
 }

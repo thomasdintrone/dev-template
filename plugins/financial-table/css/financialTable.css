@@ -12,6 +12,7 @@ NOTES
 **********************************************/
 .tableWrap { padding:10px;margin-top: 80px; width:900px; margin-left:auto; margin-right:auto;}
 table { width:100%; border-collapse:collapse; margin-bottom:40px; }
+table.selectedTable { visibility:hidden; }
 table#table2 { margin-bottom:0; }
 th, tr, td { padding:5px; }
 th { font-weight:normal; font-size:13px; color:#5A5D3F; }
@@ -38,3 +39,4 @@ span.dollar { position:absolute; left:0;  top:0px;}
 .spaceB td{  margin-bottom:30px; }
 span.indent1 { padding-left:30px; }
 span.paren { position:relative; left:4px; }
+span.percent { display:inline-block; margin-right:-12.9px; }

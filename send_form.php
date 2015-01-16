@@ -1,12 +1,10 @@
 <?php
-
 function redirect_to( $location = NULL ) {
   if ($location != NULL) {
     header("Location: {$location}");
     exit;
   }
 }
-
 $email = $_POST['email'];
 	// Check Email:
 	if(isset($email) && !empty($email)) {
@@ -37,7 +35,6 @@ $email = $_POST['email'];
 								if(strlen($value) > 63 || !preg_match('/^[a-z0-9-]+$/i',$value)) {
 									redirect_to('index.php?err=e'); break;
 		}	}	}	}	}	}	}
-
 if(empty($_POST['email']) || empty($_POST['name']) || empty($_POST['phone']) || empty($_POST['captcha']) || $_POST['captcha'] != $_POST['captcha_sum'] ) {
 	redirect_to('index.php?err=e');
 	return false;
@@ -51,11 +48,10 @@ if(empty($_POST['email']) || empty($_POST['name']) || empty($_POST['phone']) || 
 		$captcha 		= $_POST['captcha'];
 		
 		
-		$to_name 	= 'CLIENT NAME GOES HERE';
-		$to_email 	= 'support@benjaminmarc.com';
+		$to_name 	= '{CLIENT NAME GOES HERE}';
+		$to_email 	= '{EMAIL WHERE FORM IS GOING TO UPON SUBMISSION}';
 		
 		$subject 	= $to_name . " Website Submission Form";
-
 		$headers 	 = "MIME-Version: 1.0\r \n";
 		$headers	.= "Content-type: text/html; charset=UTF-8\r \n";
 		$headers	.= "From: \"".$from_name."\" <".$from_email.">\r \n";
