@@ -10,7 +10,7 @@ NOTES
 
 
 **********************************************/
-.tableWrap { padding:10px;margin-top: 80px; width:900px; margin-left:auto; margin-right:auto;}
+.tableWrap { padding:10px;margin-top: 80px; width:900px; margin-left:auto; margin-right:auto; visibility:hidden;}
 table { width:100%; border-collapse:collapse; margin-bottom:40px; }
 table.selectedTable { visibility:hidden; }
 table#table2 { margin-bottom:0; }
@@ -28,7 +28,7 @@ span.dollar { position:absolute; left:0;  top:0px;}
 #table1 span.dollar { left:8px; }
 #table2 span.dollar { left:8px; }
 #table3 span.dollar { left:8px; }
-.firstCol { width:400px; }
+/*.firstCol { width:400px; }*/
 .hover { background:#fff; }
 .borderT1 { border-top:1px solid #999793; }
 .borderT2 { border-top:2px solid #999793; }

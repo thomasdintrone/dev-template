@@ -38,13 +38,22 @@ if($body_class == '' || $body_class == 'index') { $body_class = 'homepage'; }
 $the_plugins = 
 	array(
 		'bootstrap',
+		//'data_chart',
+		//'chart',
+		//'financial_tables',
+		//'flowplayer',
+		//'jszip',
+		//'lightbox',
+		//'mousewheel',
 		//'non-responsive',
+		//'parallax',
 		//'pretty_photo',
 		//'scroll_to_fixed',
-		//'financial_tables',
-		//'slider',
-		//'lightbox',
 		//'scrollbar',
+		//'slider',
+		//'storybox',
+		//'table_hover',
+		//'touchswipe',
 	);
 
 $plugins->add_plugin($the_plugins);

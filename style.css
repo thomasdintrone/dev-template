@@ -45,6 +45,13 @@ hr { margin:30px 0; clear:both; border-top:solid 1px #e6e0da; border-bottom:soli
 .content {  }
 
 h1 { }
+h2 {  }
+h3 {  }
+h4 {  }
+h5 {  }
+h6 {  }
+
+p {  }
 
 .noPadL { padding-left:0 !important; }
 .noPadR { padding-right:0 !important; }
@@ -53,6 +60,17 @@ h1 { }
 .text-uppercase { text-transform:uppercase; }
 
 a.preload { background-position:-99999px -99999px; background-repeat:no-repeat; }
+
+.margin-auto { margin:0 auto; }
+
+.noScroll { overflow:hidden; }
+
+.fixed { position:fixed; }
+.absolute { position:absolute; }
+.relative { position:relative; }
+.static { position:static; }
+
+.centered { position:absolute; top:0; left:0; right:0; bottom:0; margin:auto; }
 
 /*********************************************
 NAVIGATION

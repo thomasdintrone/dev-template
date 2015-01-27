@@ -12,12 +12,13 @@ function setTable(table, settings){
 		'textColor': '#000000',
 		'row': [],
 		'border': [],
+		'firstColWidth': '400px',
     };
     if ( settings ){$.extend(config, settings);}
 	
 	// SET THE TABLE:	
 	$(table).addClass('selectedTable');
-	$(table).find('th:first').addClass('firstCol');
+	$(table).find('th:first').addClass('firstCol').css({ width:config.firstColWidth });
 	
 	$(table + ' td').css({ color:config.textColor })
 	

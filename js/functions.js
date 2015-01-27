@@ -35,7 +35,7 @@ jQuery.fn.animateAuto = function(prop, speed, callback){
 }
 
 /******************************************************** 
-DELAY TILL AIMATION IS DONE
+DELAY TILL ANIMATION IS DONE
 ********************************************************/
 var waitForFinalEvent = (function () {
 	  var timers = {};
@@ -83,67 +83,6 @@ function sortByClick(trigger, elementsToHide, elementsToSort) {
 }
 
 /******************************************************** 
-OPEN HOME SLIDES
-********************************************************/
-function openSlide(trigger, slide, settings) {
-			// settings
-			var config = {
-				//'dollarPosition': [0, 0, 0, 0, 0],
-				'theme': 'green',
-			};
-			if ( settings ){$.extend(config, settings);}
-			
-			slide = slide.find('article');
-			
-			// Remove class for window resize padding
-			slide.removeClass('unresizeable');
-			
-			
-			// Define Colors:
-			slide.find('div.story').each(function(i,e){
-				$(e).removeClass('green blue red purple').addClass(config.theme);
-			});
-			
-			$('div.storyboxWrap').removeClass('green blue red purple').addClass(config.theme);
-				
-			// Begin Animation
-			$('div.storiesWrap').animate({ opacity:1 });
-			
-			slide.animate({ 'padding-top':'110px' }, 1000).addClass('unresizeable');
-			slide.find('p.description').animate({ opacity:0 }, 500, function(){
-				slide.find('p.description').css({ visibility:'hidden' });
-			});
-			trigger.animate({ top:'-120px', opacity:0 }, 1100, function(){
-				trigger.css({ visibility:'hidden' });
-			});
-			slide.find('h1 span').animate({ fontSize:'40px' }, 1000);
-			
-			slide.find('.storiesWrap').animate({ 'margin-top':'-150px' }, 1000, function(){
-				slide.parent('section').addClass('scroll').addClass('selected');
-			});
-}
-
-
-/******************************************************** 
-SLIDE RESET
-********************************************************/
-function slideReset() {
-	$('section.slide2').removeClass('selected');
-	$('section.interiorSlide').css({ zIndex:10, height:0 }).removeClass('scroll');
-	$('div.storiesWrap').css({ marginTop:'300px', opacity:0 });
-	$('section article a#arrow').css({ top:0, 'visibility':'visible', opacity:1 });
-	$('p.description').css({ 'visibility':'visible', opacity:1 });
-	$('section.interiorSlide h1 span').css({ fontSize:'76px' });
-	$('section.interiorSlide article').css({ paddingTop:'324px' });
-	
-	$('div.introText').each(function(i,e) {
-		var topPadding	= (($(window).height() - $(e).height())/2) + 50;
-		$(e).parent('div').parent('article').animate({ paddingTop: topPadding });
-	});
-	
-}
-
-/******************************************************** 
 DETECT DEVICES
 ********************************************************/
 // iPad
@@ -171,8 +110,11 @@ if(isiPad()) {
 /******************************************************** 
 SCROLL TO
 ********************************************************/
-function goToByScroll(id){
-      $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+function goToByScroll(id, extra){
+	if (typeof extra === "undefined" || extra === null) { 
+    	extra = 0; 
+  	}
+	$('html,body').animate({scrollTop: ($("#"+id).offset().top + -+extra)},'slow');
 }
 
 /******************************************************** 
@@ -215,6 +157,84 @@ function parseVideo(url) {
         type: type,
         id: RegExp.$6
     };
+}
+
+/******************************************************** 
+GENERATE RANDOM NUMBER
+********************************************************/
+function GenerateRandomNumber(minNum, maxNum) {
+    var min = minNum, max = maxNum;
+    var random = 0;
+
+    while (random < 4 && random > -4) {
+        random = Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    return random;
+}
+
+/******************************************************** 
+CHECK IF ELEMENT IS SCROLLED INTO VIEW
+********************************************************/
+function isScrolledIntoView(elem) {
+	var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return (elemTop <= docViewBottom);
+}
+
+/************************************************************
+CHECK IF SOMETHING IS ANIMATING
+************************************************************/
+function isAnimating(element) {
+	// see if element is being animated. 
+	// returns "true" if animated
+	var checkElement = $(element).is(':animated');
+	
+	return checkElement;
+}
+/*
+Usage:
+var checkDiv = isAnimating('html');
+if(checkDiv == true) {
+	// do stuff
+} else { 
+	// do other stuff
+}
+*/
+
+/************************************************************
+MAKE AN ELEMENT(S) BROWSER HEIGHT
+************************************************************/
+function browserHeight(element) {
+	$(element).each(function(i,e){
+		
+		// If has windowHeight class, make element browser height
+		// if($(e).hasClass('windowHeight')) {
+			
+				$(e).css({ 'min-height' : $(window).height() });
+			
+		//}
+			
+	});
+}
+
+/************************************************************
+CENTER AN ELEMENT(S) WITHIN ANOTHER ELEMENT
+************************************************************/
+function centerElement(elementWrap, element) {
+	$(elementWrap).each(function(i,e){
+		
+		// if .wrap has center class, center it within the the slide
+		//if($(e).find(element).hasClass('center')) {
+			var wrapHeight	 = $(e).find(element).height()
+			$(e).find(element).css({ height : wrapHeight }).addClass('centered');
+		//}
+			
+	});
 }
 
 /************************************************************
