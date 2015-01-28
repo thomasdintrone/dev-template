@@ -4,6 +4,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
 <script type="text/javascript" src="<?php echo SITE_ROOT; ?>js/actual/jquery.actual.min.js"></script>
+<script type="text/javascript" src="<?php echo SITE_ROOT; ?>js/placeholder/jquery.placeholder.min.js"></script>
+<!--<script type="text/javascript" src="<?php echo SITE_ROOT; ?>js/background-size-deprecated/jquery.backgroundSize.js"></script>-->
 
 <!-- SELECTIVZR -->
 <!-- Allows for CSS3 pseudo selectors || Reference: http://selectivizr.com -->

@@ -11,6 +11,18 @@ NOTES
  
 For PIE: behavior: url(css/pie/PIE.htc);
 
+IE8 Background Cover: 
+.selector { 
+    background-size: cover;
+    /* The url is relative to the document, not to the css file! */
+    /* Prefer absolute urls to avoid confusion. */
+   /* -ms-behavior: url(PATHTOFILE/backgroundsize.min.htc);
+}
+
+** I've included the depricated version of this plugin which is actually a 
+** jQuery plugin in the footer_assets.php file. "background-size-deprecated" folder.
+** For that, just include the file and then use this: $('.selector').css("background-size", "cover");
+
 Clearfix: <div class="clearfix visible-xs-block"></div>
 
 **********************************************/
@@ -119,6 +131,12 @@ span.successMessage { color:green; }
 /*********************************************
 SPECIALTY
 **********************************************/
+/* Style placeholder text */
+::-webkit-input-placeholder { color: #909; } /* WebKit browsers */
+:-moz-placeholder { color: #909;  opacity: 1; } /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder { color: #909; opacity: 1; } /* Mozilla Firefox 19+ */
+:-ms-input-placeholder { color: #909; } /* Internet Explorer 10+ */
+
 /* This will hide all share this stuff except for the "ShareThis" text */
 span.sharethis { background:none !important;}
 .stButton .chicklets { font-family:inherit !important; padding-left:0 !important; }

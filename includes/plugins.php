@@ -51,6 +51,21 @@ class Plugin {
 	public function add_plugin($plugin_array) {
 		foreach($plugin_array as $plugin) {
 			
+			// ADAPTIVE BACKGROUNDS
+			if($plugin == 'adaptive-backgrounds') {
+				$dir = 'adaptive-backgrounds'; // This is the name of the specific plugin directory
+				$this->plugins_js[]		= self::js_ext(SITE_ROOT.$dir.'/src/jquery.adaptive-backgrounds.js'); // The path to the JS file
+				
+				// REFERENCE: 	A jQuery plugin for extracting the dominant color from images and 
+				//				applying the color to their parent.
+				//				http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/
+				// HELPERS:		$(document).ready(function(){
+				//				  $.adaptiveBackground.run()
+				//				});
+				//				<img src="/image.jpg" data-adaptive-background='1'>
+				//				<div style='background-image: url(/some-image.jpg)' data-adaptive-background='1' data-ab-css-background='1'></div>
+			}
+			
 			// BOOTSTRAP
 			if($plugin == 'bootstrap') {
 				$dir = 'bootstrap'; // This is the name of the specific plugin directory
@@ -102,6 +117,19 @@ class Plugin {
 				*/			   	
 			}
 			
+			// FITTEXT
+			if($plugin == 'fittext') {
+				$dir = 'fittext'; // This is the name of the specific plugin directory
+				$this->plugins_js[]		= self::js($dir.'/jquery.fittext.js'); // The path to the JS file
+				
+				// REFERENCE: 	http://fittextjs.com/
+				//				FitText makes font-sizes flexible. Use this plugin on your fluid or responsive 
+				//				layout to achieve scalable headlines that fill the width of a parent element.
+				/* HELPERS: 	jQuery("#responsive_headline").fitText();
+				//				jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
+				*/			   	
+			}
+			
 			// FLOWPLAYER
 			if($plugin == 'flowplayer') {
 				$dir = 'flowplayer'; // This is the name of the specific plugin directory
@@ -119,6 +147,20 @@ class Plugin {
 				*/			   	
 			}
 			
+			// HOTKEYS
+			if($plugin == 'hotkeys') {
+				$dir = 'hotkeys'; // This is the name of the specific plugin directory
+				$this->plugins_js[]		= self::js($dir.'/jquery.hotkeys.js'); // The path to the JS file
+				
+				// REFERENCE: 	https://github.com/jeresig/jquery.hotkeys
+				// 				jQuery Hotkeys is a plug-in that lets you easily add and remove handlers for keyboard events 
+				//				anywhere in your code supporting almost any key combination.
+				/* HELPERS: 	// e.g. replace '$' sign with 'EUR'
+								$('input.foo').on('keyup', null, '$', function(){
+								  this.value = this.value.replace('$', 'EUR');
+								}); 
+				*/			   	
+			}
 			
 			// JSZIP
 			if($plugin == 'jszip') {
@@ -135,6 +177,18 @@ class Plugin {
 									})(jQuery);
 								</script>
   		
+				*/			   	
+			}
+			
+			// LAZYLOAD
+			if($plugin == 'lazyload') {
+				$dir = 'lazyload'; // This is the name of the specific plugin directory
+				$this->plugins_js[]		= self::js($dir.'/jquery.lazyload.min.js'); // The path to the JS file
+				
+				// REFERENCE: 	jQuery plugin for lazy loading images 
+				// 				http://www.appelsiini.net/projects/lazyload
+				/* HELPERS: 	<img class="lazy" data-original="img/example.jpg" width="640" height="480">
+								$("img.lazy").lazyload();
 				*/			   	
 			}
 			
@@ -231,6 +285,31 @@ class Plugin {
 				*/			   	
 			}
 			
+			// SIMPLE WEATHER
+			if($plugin == 'simple-weather') {
+				$dir = 'simpleweather'; // This is the name of the specific plugin directory
+				$this->plugins_js[]		= self::js($dir.'/jquery.simpleWeather.min.js'); // The path to the JS file
+				
+				// REFERENCE: 	A plugin to display current weather data for any location and doesn't get in your way.
+				//				http://simpleweatherjs.com/
+				/* HELPERS: 	$.simpleWeather({
+									zipcode: '76309',
+									unit: 'f',
+									success: function(weather) {
+										html = '<h2>'+weather.city+', '+weather.region+'</h2>';
+										html += '<img style="float:left;" width="125px" src="images/weather/'+weather.code+'.png">';
+										html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'<br /><span>'+weather.currently+'</span></p>';
+										html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
+								 
+										$("#weather").html(html);
+									},
+									error: function(error) {
+										$("#weather").html("<p>"+error+"</p>");
+									}
+								});
+				*/			   	
+			}
+			
 			// SLIDER
 			if($plugin == 'slider') {
 				$dir = 'slider'; // This is the name of the specific plugin directory
@@ -285,6 +364,20 @@ class Plugin {
 								});
   		
 				*/			   	
+			}
+			
+			// WAYPOINTS
+			if($plugin == 'waypoints') {
+				$dir = 'waypoints'; // This is the name of the specific plugin directory
+				$this->plugins_js[]		= self::js($dir.'/lib/jquery.waypoints.min.js'); // The path to the JS file
+				$this->plugins_js[]		= self::js($dir.'/lib/shortcuts/infinite.min.js'); // The path to the JS file
+				$this->plugins_js[]		= self::js($dir.'/lib/shortcuts/inview.min.js'); // The path to the JS file
+				$this->plugins_js[]		= self::js($dir.'/lib/shortcuts/sticky.min.js'); // The path to the JS file				
+				
+				// REFERENCE: 	Waypoints is a library that makes it easy to execute a function whenever you scroll to an element.
+				//				http://imakewebthings.com/waypoints/
+				//				http://imakewebthings.com/waypoints/guides/getting-started/
+				// HELPERS: 	$('#tableone').tableHover();
 			}
 			
 			

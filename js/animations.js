@@ -39,7 +39,9 @@ $(function(){
 		}
 	*/
 	
-	
+	// PLACEHOLDER BEHAVIOR FOR FORMS
+	// Reference: http://mathiasbynens.github.io/jquery-placeholder
+	$('input, textarea').placeholder();
 	
 	/************************************************************
 	CUSTOM CODING:

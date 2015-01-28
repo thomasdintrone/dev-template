@@ -37,12 +37,16 @@ if($body_class == '' || $body_class == 'index') { $body_class = 'homepage'; }
 // Select Plugins to include
 $the_plugins = 
 	array(
+		//'adaptive-backgrounds',
 		'bootstrap',
 		//'data_chart',
 		//'chart',
 		//'financial_tables',
+		//'fittext',
 		//'flowplayer',
+		//'hotkeys',
 		//'jszip',
+		//'lazyload',
 		//'lightbox',
 		//'mousewheel',
 		//'non-responsive',
@@ -54,6 +58,7 @@ $the_plugins =
 		//'storybox',
 		//'table_hover',
 		//'touchswipe',
+		//'waypoints',
 	);
 
 $plugins->add_plugin($the_plugins);
