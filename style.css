@@ -137,6 +137,12 @@ SPECIALTY
 ::-moz-placeholder { color: #909; opacity: 1; } /* Mozilla Firefox 19+ */
 :-ms-input-placeholder { color: #909; } /* Internet Explorer 10+ */
 
+/* Add a RED asterisk to placeholder text with "required" class - WIN */
+.required::-webkit-input-placeholder:after { content:'*'; color: red; }
+.required:-moz-placeholder:after { content:'*'; color: red; } /* Firefox 18- */
+.required::-moz-placeholder:after { content:'*'; color: red; } /* Firefox 19+ */
+.required:-ms-input-placeholder:after { content:'*'; color: red; } /* IE Fail */
+
 /* This will hide all share this stuff except for the "ShareThis" text */
 span.sharethis { background:none !important;}
 .stButton .chicklets { font-family:inherit !important; padding-left:0 !important; }
