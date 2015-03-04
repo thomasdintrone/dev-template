@@ -99,7 +99,7 @@ class Plugin {
 			
 			// FINANCIAL TABLES
 			if($plugin == 'financial_tables') {
-				$dir = 'financial-table'; // This is the name of the specific plugin directory
+				$dir = 'financial-tables'; // This is the name of the specific plugin directory
 				$this->plugins_css[] 	= self::css($dir.'/css/financialTable.css'); // The path to the CSS file
 				$this->plugins_js[]		= self::js($dir.'/js/jquery.financialTable.js'); // The path to the JS file
 				
