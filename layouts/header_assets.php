@@ -25,6 +25,10 @@
 	<link href="<?php echo SITE_ROOT; ?>css/ie9.css" type="text/css" rel="stylesheet">
 <![endif]-->
 
+<!--[if IE 8]>
+	<link href="<?php echo SITE_ROOT; ?>css/ie8.css" type="text/css" rel="stylesheet">
+<![endif]-->
+
 <!--[if IE 7]>
 	<link href="<?php echo SITE_ROOT; ?>css/ie7.css" type="text/css" rel="stylesheet">
 <![endif]-->
