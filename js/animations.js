@@ -43,6 +43,13 @@ $(function(){
 	// Reference: http://mathiasbynens.github.io/jquery-placeholder
 	$('input, textarea').placeholder();
 	
+	// Add bootstrap's clearfix classes if div has class of "clear"
+	$('.clear').each(function(i,e){
+		
+		$(e).addClass('clearfix visible-xs-block');
+		
+	});
+	
 	/************************************************************
 	CUSTOM CODING:
 	************************************************************/

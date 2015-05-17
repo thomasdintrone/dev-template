@@ -37,6 +37,32 @@ function nav($v) {
 }
 
 /*************************************************************************
+MENU BUILDING FUNCTION
+*************************************************************************/
+function build_menu($array, $nav_class='', $ul_class='', $current_page='') {
+	
+	$i = 1;
+	
+	$menu = '';
+	$menu .= '<nav class="'.$nav_class.'">';
+	$menu .= '	<ul class="'.$ul_class.'">';
+		foreach($array as $link=>$page) {
+			
+			$current_page_class = 'menu-item-'.$i;
+			
+			if($current_page == $link) { $current_page_class .= ' current-menu-item '; }
+			
+			$menu .= '<li class="'.$current_page_class.'"><a href="'.$page.'">'.$link.'</a></li>';
+			$i++;
+		}
+	$menu .= '	</ul>';
+	$menu .= '</nav><!-- END nav.'.$nav_class.' -->';
+	
+	return $menu;
+	
+}
+
+/*************************************************************************
 PRELOAD
 *************************************************************************/
 function preload($array) {
