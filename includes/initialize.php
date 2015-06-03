@@ -59,6 +59,7 @@ $the_plugins =
 		//'table_hover',
 		//'touchswipe',
 		//'waypoints',
+		//'youtube_google_analytics',
 	);
 
 $plugins->add_plugin($the_plugins);
