@@ -180,6 +180,31 @@ class Plugin {
 				*/			   	
 			}
 			
+			// JQUERY ADDRESSS
+			if($plugin == 'jquery_address') {
+				$dir = 'jquery.address'; // This is the name of the specific plugin directory
+				$this->plugins_js[]		= self::js($dir.'/jquery.address-1.5.min.js'); // The path to the JS file
+				
+				// REFERENCE: 	http://www.asual.com/jquery/address/
+				// The jQuery Address plugin provides powerful deep linking capabilities and allows the creation of unique virtual addresses that can point to a website section or an application state. It enables a number of important capabilities including:
+				// Bookmarking in a browser or social website
+				// Sending links via email or instant messenger
+				// Finding specific content using the major search engines
+				// Utilizing browser history and reload buttons
+				
+				/* HELPERS: 	<script>
+									$.address.change(function(event) {
+										// do something depending on the event.value property, e.g.
+										// $('#content').load(event.value + '.xml');
+									});
+									$('a').click(function() {
+										$.address.value($(this).attr('href'));
+									});
+								</script>
+  		
+				*/			   	
+			}
+			
 			// LAZYLOAD
 			if($plugin == 'lazyload') {
 				$dir = 'lazyload'; // This is the name of the specific plugin directory

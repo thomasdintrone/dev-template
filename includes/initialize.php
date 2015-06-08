@@ -46,6 +46,7 @@ $the_plugins =
 		//'flowplayer',
 		//'hotkeys',
 		//'jszip',
+		//'jquery_address',
 		//'lazyload',
 		//'lightbox',
 		//'mousewheel',
