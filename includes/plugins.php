@@ -408,7 +408,7 @@ class Plugin {
 			// Youtube Google Analytics
 			if($plugin == 'youtube_google_analytics') {
 				$dir = 'youtube-google-analytics'; // This is the name of the specific plugin directory
-				$this->plugins_js[]		= self::js($dir.'/lunametrics-youtube-v7.gtm.js'); // The path to the JS file
+				$this->plugins_js[]		= self::js($dir.'/lunametrics-youtube.gtm.min.js'); // The path to the JS file
 				
 				// REFERENCE: 	https://github.com/lunametrics
 				// HELPERS: 	Simply add this file and as long as google analytics is installed you'll be able to track youtube iframe activities including play, pause, & watch to end! #awesome
