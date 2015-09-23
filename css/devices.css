@@ -63,3 +63,16 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+/* Styles */
+}
+
+/* iPhone 6 ----------- */
+@media  only screen 
+    and (max-device-width: 640px), 
+    only screen and (max-device-width: 667px), 
+    only screen and (max-width: 480px) { 
+/* Styles */
+}
