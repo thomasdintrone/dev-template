@@ -50,6 +50,51 @@ $(function(){
 		
 	});
 	
+	// Mobile Menu
+	$('.has-mobile-menu').each(function(i,e){
+		
+		// Build the menu
+		$(this).wrapInner('<div class="menu-wrap"></div>');
+		$(this).prepend('<a href="#" class="menu-button"><i class="fa fa-bars"></i></a>');
+		
+		if($(this).hasClass('center-vertically')) {
+			$(this).find('.menu-wrap ul:first').addClass('centered-menu');
+		}
+		
+	});
+	
+	// Open/Close Mobile Menu
+	$('a.menu-button').on({
+		click: function(){
+			$(this).toggleClass('open');
+			$('body,html').toggleClass('noScroll');
+									
+			var ul = $(this).parent('nav').find('.menu-wrap ul');		
+			
+			var centerUl = false;
+			if(ul.hasClass('centered-menu')) { 
+				centerUl = true;
+			}
+			
+			if($(this).hasClass('open')) {
+				$(this).html('<i class="fa fa-times"></i>');
+				if(centerUl == true) {
+					var ulHeight = ul.actual('height');
+					ul.height(ulHeight).addClass('center');
+				}
+				$('.menu-wrap').fadeIn();
+			} else {
+				$(this).html('<i class="fa fa-bars"></i>');
+				$('.menu-wrap').fadeOut(function(){
+					ul.removeClass('center').css({ height:'auto' });
+				});
+				
+			}
+			
+			return false;
+		}
+	});
+	
 	/************************************************************
 	CUSTOM CODING:
 	************************************************************/

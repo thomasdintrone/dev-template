@@ -16,5 +16,14 @@
 }
 
 @media (max-width: 767px) { 
-
+	
+	/* NAVIGATION */
+	.has-mobile-menu a.menu-button { display:inline-block; }
+	.has-mobile-menu .menu-wrap { display:none; text-align:center; position: fixed; width: 100%; height: 100%; left: 0; top: 0; overflow: auto; background:#e67524;}
+	.has-mobile-menu ul { margin:0 !important;  }
+	.has-mobile-menu ul.center { position:absolute; margin:auto !important; top:0; left:0; bottom:0; right:0; } 
+	.has-mobile-menu ul li,
+	.has-mobile-menu ul li a { display:block; margin-left:0; margin-right:0; padding-left:0; padding-right:0 !important;}
+	.has-mobile-menu ul li a {   padding: 10px 0;color:#fff; font-size:20px; }  
+	
 }

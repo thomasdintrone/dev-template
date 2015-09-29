@@ -9,17 +9,22 @@ Define them as absolute paths to make sure that require_once works as expected
 // (\ for Windows, / for Unix)
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
-// LOCAL SITE ROOT PATH
-defined('SITE_ROOT') ? null : define('SITE_ROOT', 'http://localhost/ready-template/html/');
+// GET THE SITE ROOT
+if(isset($_SERVER['HTTPS'])){
+	$protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
+} else {
+	$protocol = 'http';
+ }
+$site_root = $protocol."://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'/';
 
-// REMOTE SITE ROOT PATH
-//defined('SITE_ROOT') ? null : define('SITE_ROOT', 'http://dev.curran-connors.com/{REMOTE-PATH-GOES-HERE}/');
+// DEFINE SITE ROOT PATH
+defined('SITE_ROOT') ? null : define('SITE_ROOT', $site_root);
 
 // LIBRARY PATH
 defined('LIB_PATH') ? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
 
 // BASE PATH
-defined('MAIN_BODY_CLASS') ? null : define('MAIN_BODY_CLASS', 'ready-template/html'); // this is the name of the folder
+defined('MAIN_BODY_CLASS') ? null : define('MAIN_BODY_CLASS', dirname($_SERVER["REQUEST_URI"].'?')); // this is the name of the folder
 
 /*******************************
 HTML SPECIFIC PATHS
