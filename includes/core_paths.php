@@ -42,13 +42,23 @@ defined('CSS_PATH') ? null : define('CSS_PATH', SITE_ROOT.'/css');
 // JAVASCRIPT FILE PATH
 defined('JS_PATH') ? null : define('JS_PATH', SITE_ROOT.'/js');
 
-/*******************************
+// JAVASCRIPT FILE PATH
+defined('FAVICON_PATH') ? null : define('FAVICON_PATH', SITE_ROOT.'/img/favicons');
+
+/*********************************************************************
 COMPANY INFORMATION
-********************************/
+Mainly for use with the social sharing in header_assets.php file 
+*********************************************************************/
 // WEBSITE COMPANY NAME
 defined('COMPANY_NAME') ? null : define('COMPANY_NAME', 'COMPANY NAME GOES HERE');
 
-// WEBSITE COMPANY NAME
-defined('COMPANY_EMAIL') ? null : define('COMPANY_EMAIL', 'EMAIL GOES HERE');
+// WEBSITE COMPANY URL
+defined('COMPANY_URL') ? null : define('COMPANY_URL', SITE_ROOT);
+
+// WEBSITE COMPANY DESCRIPTION
+defined('COMPANY_DESCRIPTION') ? null : define('COMPANY_DESCRIPTION', '');
+
+// WEBSITE COMPANY IMAGE
+defined('COMPANY_IMAGE') ? null : define('COMPANY_IMAGE', '');
 
 ?>
