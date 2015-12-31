@@ -10,6 +10,7 @@
 <link href="<?php echo SITE_ROOT; ?>css/responsive.css" type="text/css" rel="stylesheet">
 <link href="<?php echo SITE_ROOT; ?>css/browsers.css" type="text/css" rel="stylesheet">
 <link href="<?php echo SITE_ROOT; ?>css/devices.css" type="text/css" rel="stylesheet">
+<link href="<?php echo SITE_ROOT; ?>css/animate.css" type="text/css" rel="stylesheet">
 
 <!-- DEVELOPER STYLESHEETS -->
 <!-- ** PLEASE USE any of the 4 stylesheets below to avoid overriding eachother. Developer1.css is uncommented as first default. Uncomment whichever one you'd like to use as well if needed -->
