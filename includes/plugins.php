@@ -69,8 +69,12 @@ class Plugin {
 			// BOOTSTRAP
 			if($plugin == 'bootstrap') {
 				$dir = 'bootstrap'; // This is the name of the specific plugin directory
-				$this->plugins_css[] 	= self::css_ext(SITE_ROOT.$dir.'/css/bootstrap.min.css'); // The path to the CSS file
-				$this->plugins_js[]		= self::js_ext(SITE_ROOT.$dir.'/js/bootstrap.min.js'); // The path to the JS file
+				$this->plugins_css[] 	= self::css(SITE_ROOT.$dir.'/css/bootstrap.min.css'); // The path to the CSS file
+				$this->plugins_js[]		= self::js(SITE_ROOT.$dir.'/js/bootstrap.min.js'); // The path to the JS file
+				
+				// Bootstrap select CDNs
+				$this->plugins_css[] 	= self::css_ext('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css'); // The path to the CSS file
+				$this->plugins_js[]		= self::js_ext('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js'); // The path to the JS file
 				
 				// REFERENCE: 	http://getbootstrap.com/javascript/
 			}
