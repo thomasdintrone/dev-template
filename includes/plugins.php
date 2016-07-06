@@ -13,20 +13,20 @@ class Plugin {
 	
 	
 	public function css($path_to_file) {
-		return '<link rel="stylesheet" href="'.SITE_ROOT.$this->p_dir.'/'.$path_to_file.'" type="text/css" media="screen" charset="utf-8" />
+		return '<link rel="stylesheet" href="'.SITE_ROOT.$this->p_dir.'/'.$path_to_file.UNCACHE.'" type="text/css" media="screen" charset="utf-8" />
 ';
 	}
 	public function css_ext($path_to_file) {
-		return '<link rel="stylesheet" href="'.$path_to_file.'" type="text/css" media="screen" charset="utf-8" />
+		return '<link rel="stylesheet" href="'.$path_to_file.UNCACHE.'" type="text/css" media="screen" charset="utf-8" />
 ';
 	}
 	
 	public function js($path_to_file) {
-		return '<script src="'.SITE_ROOT.$this->p_dir.'/'.$path_to_file.'" type="text/javascript" charset="utf-8"></script>
+		return '<script src="'.SITE_ROOT.$this->p_dir.'/'.$path_to_file.UNCACHE.'" type="text/javascript" charset="utf-8"></script>
 ';
 	}
 	public function js_ext($path_to_file) {
-		return '<script src="'.$path_to_file.'" type="text/javascript" charset="utf-8"></script>
+		return '<script src="'.$path_to_file.UNCACHE.'" type="text/javascript" charset="utf-8"></script>
 ';
 	}
 	
@@ -69,8 +69,8 @@ class Plugin {
 			// BOOTSTRAP
 			if($plugin == 'bootstrap') {
 				$dir = 'bootstrap'; // This is the name of the specific plugin directory
-				$this->plugins_css[] 	= self::css(SITE_ROOT.$dir.'/css/bootstrap.min.css'); // The path to the CSS file
-				$this->plugins_js[]		= self::js(SITE_ROOT.$dir.'/js/bootstrap.min.js'); // The path to the JS file
+				$this->plugins_css[] 	= self::css_ext(SITE_ROOT.$dir.'/css/bootstrap.min.css'); // The path to the CSS file
+				$this->plugins_js[]		= self::js_ext(SITE_ROOT.$dir.'/js/bootstrap.min.js'); // The path to the JS file
 				
 				// Bootstrap select CDNs
 				$this->plugins_css[] 	= self::css_ext('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css'); // The path to the CSS file

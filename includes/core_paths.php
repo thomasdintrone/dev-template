@@ -26,6 +26,8 @@ defined('LIB_PATH') ? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
 // BASE PATH
 defined('MAIN_BODY_CLASS') ? null : define('MAIN_BODY_CLASS', dirname($_SERVER["REQUEST_URI"].'?')); // this is the name of the folder
 
+// UNCACHE
+defined('UNCACHE') ? null : define('UNCACHE', '?v='.date('YmdHis')); // this is the name of the folder
 /*******************************
 HTML SPECIFIC PATHS
 ********************************/
